@@ -1,0 +1,10 @@
+.logo_container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.logo{
+    width: 400px;
+    height: 450px;
+    margin: auto
+}
