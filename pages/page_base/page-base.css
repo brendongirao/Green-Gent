@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'Myriad Pro Bold Cond';
-    src: url('./assets/fonts/MyriadPro-BoldCond.otf');
+    src: url('./../../assets/fonts/MyriadPro-BoldCond.otf');
 }
 @font-face {
     font-family: 'Myriad Pro Cond';
-    src: url('./assets/fonts/MyriadPro-Cond.otf');
+    src: url('./../../assets/fonts/MyriadPro-Cond.otf');
 }
 @font-face {
     font-family: 'Roboto Light';
-    src: url('./assets/fonts/Roboto-Light_0.ttf');
+    src: url('./../../assets/fonts/Roboto-Light_0.ttf');
 }
 @font-face {
     font-family: 'Roboto Bold';
-    src: url('./assets/fonts/Roboto-Bold.ttf');
+    src: url('./../../assets/fonts/Roboto-Bold.ttf');
 }
 .body {
      background-color: #f2f1f6;
