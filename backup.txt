@@ -1,0 +1,210 @@
+
+======BODY DO INDEX=====
+
+<div class="row">
+        <div class="col-md-6">
+            <div class="trianglesBox" id="tb">
+                <!-- <div class="triangle">
+    
+                    <svg version="1.1" id="Layer_1" x="0px" y="0px" 
+                        width="150px" height="129.74px" 
+                        viewBox="0 0 925 800.111" enable-background="new 0 0 925 800.111" >
+                        
+                        <polygon fill="none" stroke="#AEBD24" 
+                            stroke-width="40" stroke-miterlimit="10" 
+                            points="24.905,787.018 463,28.216   901.095,787.018 "/>
+    
+                    </svg>
+    
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-6 right">
+            <img src="./assets/images/profile.png" class="profile" alt="">
+            <span class="title dark-grey-font">Hey, I'm Brendon</span>
+            <div class="desc">
+                I’m a brazilian digital design student and enthusiastic photographer and this is my portfolio, welcome! 
+                <p><p> Here I share with the world some of my academic and professional work. 
+                <p><p> I hope you like my stuff :)
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/jquery/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            for(var i=0; i<48; i++){
+                var triangleCod = "<div class='triangle'><svg version='1.1' id='Layer_1' x='0px' y='0px' width='100px' height='86.49px' viewBox='0 0 925 800.111' enable-background='new 0 0 925 800.111' ><polygon fill='none' stroke='#AEBD24' stroke-width='40' stroke-miterlimit='10' points='24.905,787.018 463,28.216   901.095,787.018 '/></svg></div>";
+                $(".trianglesBox").append(triangleCod);
+                var tri = $(".triangle").get(i);
+                if(i%2!=0){
+                    console.log(tri);
+                    tri.classList.add("inverse-triangle");
+                    // i--;
+                }
+            }
+
+
+        })
+    </script>
+
+    <script src="./assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+======BODY DO INDEX=====
+
+
+======CSS DO INDEX======
+
+    @font-face {
+    font-family: 'Myriad Pro Bold Cond';
+    src: url('./assets/fonts/MyriadPro-BoldCond.otf');
+}
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    src: url('./assets/fonts/MyriadPro-Cond.otf');
+}
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('./assets/fonts/Roboto-Light_0.ttf');
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('./assets/fonts/Roboto-Bold.ttf');
+}
+.body {
+     margin: 0;
+     overflow-x: hidden;
+     width: 100vw;
+     height: 100vh;
+     position: relative; 
+     border-bottom: 15px solid #AEBD24;
+}
+
+canvas { 
+    width: 100vw; 
+    height: 100vh; 
+    display: block
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Myriad Pro Bold Cond';
+    text-transform: uppercase;    
+}
+
+p{
+    font-family: 'Roboto Light';
+}
+
+a, a:hover{
+    font-family: 'Roboto Light';  
+    color: inherit;
+    text-decoration: none;
+}
+
+span{
+    font-family: 'Roboto Light';    
+}
+
+.profile{
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+
+.right{
+    padding-top: 70px;
+}
+
+.title{
+    font-family: 'Roboto Bold';
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+
+
+.page-footer{
+    background-color: black;
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+}
+
+.desc{
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Roboto Light';
+}
+
+.no-padding{
+    padding: 0px;
+    height: 100vh;
+    position: relative;
+}
+
+.triangle{
+    margin-right: -25px;
+    height: 86.49px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.inverse-triangle{
+    transform: rotate(180deg);
+    /* margin-top: -10px;     */
+    display: inline-block;    
+}
+
+.trianglesBox{
+    width: 140%;
+    height: 70vh;
+    padding-left: 10px;
+    margin-top: -150px;
+    margin-left: -200px;
+    transform: rotate(-30deg);
+}
+
+======CSS DO INDEX======
+
+
+========OUTRA LINHA DE PROJETOS===========
+<!-- <div class="row row-project">
+                            
+        <div class="col-md-4">
+            <div class="project project-upside">
+                <img src="./assets/images/projects/liber/liber.png" class="project-thumbnail">
+                <img src="./assets/images/projects/liber/liber-hover.png" class="project-thumbnail-hover">
+                <span class="project-title light-grey-font">PROJETO LIBER</span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="project project-upside">
+                <img src="./assets/images/projects/up/up.png" class="project-thumbnail">
+                <img src="./assets/images/projects/up/up-hover.png" class="project-thumbnail-hover">
+                <span class="project-title light-grey-font">APLICATIVO UP</span>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="project">
+                <span class="project-title light-grey-font">PROJETO GEÓLEO</span>
+                <img src="./assets/images/projects/geoleo/geoleo.png" class="project-thumbnail">
+                <img src="./assets/images/projects/geoleo/geoleo-hover.png" class="project-thumbnail-hover">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="project project-upside">
+                <img src="./assets/images/projects/liber/liber.png" class="project-thumbnail">
+                <img src="./assets/images/projects/liber/liber-hover.png" class="project-thumbnail-hover">
+                <span class="project-title light-grey-font">PROJETO LIBER</span>
+            </div>
+        </div>
+    </div> -->

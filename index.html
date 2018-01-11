@@ -6,17 +6,198 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" href="./assets/colors/colors.css">
     <link rel="stylesheet" href="./index.css">
     <title>The Green Gent</title>
 </head>
-<body class="body">
+<body class="light-grey-background">
 
-    <!-- <script src="./assets/threejs/three.js"></script> -->
+    <div class="row no-padding">
+        <div class="col-md-4 no-padding">
+            <div class="body">
+                <ul class="menu">
+                    <li class="menu-item" id="1">WHO I AM?</li>
+                    <li class="menu-item" id="2">MY PROJECTS</li>
+                    <li class="menu-item" id="3">MY KNOWLEDGE</li>
+                    <li class="menu-item" id="4">CONTACT ME</li>
+                </ul>
+                <img src="./assets/images/loading.gif" class="loading" alt="">
+                <!-- <div class="loading"></div> -->
+            </div>
+        </div>
 
-    <script src="./assets/jquery/jquery.min.js"></script>
-    <!-- <script></script> -->
+        <div class="col-md-8 no-padding">
+            <div class="black-body">
+                <div class="content">
+                    <img src="./assets/images/logos/logotype/white.png" class="white-logo">
+                </div>
+                <div class="content">
+                    <!-- <img src="./assets/images/logos/logotype/white.png" class="white-logo"> -->
+                    <div class="wim">
+                        <img src="./assets/images/corte.png" class="profile" alt="">
+                        <span class="title light-grey-font">Hey, I'm Brendon</span>
+                        <div class="desc light-grey-font">
+                            I’m a brazilian digital design student and enthusiastic photographer and this is my portfolio, welcome! 
+                            <p><p> Here I share with the world some of my academic and professional work. 
+                            <p><p> I hope you like my stuff :)
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+
+                    <div class="projects-container">
+                        <div class="row row-project">
+
+                            <div class="col-md-4">
+                                <div class="project project-upside" id="up">
+                                    <img src="./assets/images/projects/up/up.png" class="project-thumbnail">
+                                    <img src="./assets/images/projects/up/up-hover.png" class="project-thumbnail-hover">
+                                    <span class="project-title light-grey-font">APLICATIVO UP</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="project">
+                                    <span class="project-title light-grey-font">PROJETO GEÓLEO</span>
+                                    <img src="./assets/images/projects/geoleo/geoleo.png" class="project-thumbnail">
+                                    <img src="./assets/images/projects/geoleo/geoleo-hover.png" class="project-thumbnail-hover">
+                                </div>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <div class="project project-upside">
+                                    <img src="./assets/images/projects/quixique/quixique.png" class="project-thumbnail">
+                                    <img src="./assets/images/projects/quixique/quixique-hover.png" class="project-thumbnail-hover">
+                                    <span class="project-title light-grey-font">PROJETO QUIXIQUE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="content">
+                    <img src="./assets/images/logos/logotype/white.png" class="white-logo">
+                </div>
+                <div class="content">
+                    <img src="./assets/images/logos/logotype/white.png" class="white-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/jquery/jquery.min.js"></script>    
 
     <script src="./assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    
+    <script>
+
+        $(document).ready(function(){
+
+            // scroll(100);
+            $(".loading").hide();
+            var vh = window.innerHeight/100;
+            var currentScrollTop = 0;
+            var screen = window.innerHeight;
+            var scroll = [true, true, true];
+
+            function checkScroll(){
+                for(i in scroll){
+                    if(scroll[i] == null){
+                        return true;
+                    }
+                    else if(scroll[i] == true){
+                        scroll[i] = false;
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            var logoCod = "<img src='./assets/images/logos/logotype/color.png' class='logo'>";
+            setTimeout(function() {
+                $(".body").append(logoCod);
+                
+                setTimeout(function(){
+                    $(".logo").fadeOut("fast");
+                    $(".body").addClass("body-reduce");
+                    $(".black-body").addClass("black-body-expand");
+                    // $(".black-body").scroll(100);
+    
+                    setTimeout(function(){
+                        $(".content").addClass("display-block");
+                        $(".white-logo").addClass("white-logo-expanded");
+                        $(".white-logo")[0].draggable =false;
+                        $(".menu").addClass("menu-show"); 
+                    }, 500)
+                }, 1000);
+    
+            }, 0);
+
+            
+            $("#1").click(function(){
+                console.log("scroo" + currentScrollTop);
+                if($(".black-body").scrollTop() == screen){
+
+                }else{
+                    $(".black-body").animate({ scrollTop:screen }, 600);
+                }
+            })
+
+            $("#2").click(function(){
+                if($(".black-body").scrollTop() == screen*2){
+
+                }else{
+                    $(".black-body").animate({ scrollTop:screen*2 }, 600);
+                }
+            })
+
+            $("#3").click(function(){
+                if($(".black-body").scrollTop() == screen*3){
+
+                }else{
+                    $(".black-body").animate({ scrollTop:screen*3 }, 600);
+                }
+            })
+
+            $("#4").click(function(){
+                if($(".black-body").scrollTop() == screen*4){
+
+                }else{
+                    $(".black-body").animate({ scrollTop:screen*4 }, 600);
+                }
+            })
+
+
+            function updateScrollTop(){
+                currentScrollTop = $(".black-body").scrollTop();
+            }
+
+            var keepScrolling = true;
+
+            $(".black-body").bind('scroll', function(){
+                updateScrollTop();
+                console.log(currentScrollTop);
+            })
+            
+            $("#up").click(function(){
+                console.log("clickou");
+                $(".project").hide();
+                $(".menu").hide();
+                $(".body").addClass("body-fadeout");   
+                $(".black-body").addClass("black-body-fadein");   
+                setTimeout(function(){
+                    window.location.href="./pages/up/up.html";
+                }, 400)             
+            })
+
+        })
+
+    
+        // $(document).scroll();
+
+    </script>
 
 </body>
 </html>

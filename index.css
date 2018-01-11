@@ -7,6 +7,10 @@
     src: url('./assets/fonts/MyriadPro-Cond.otf');
 }
 @font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('./assets/fonts/MyriadPro-Bold.otf');
+}
+@font-face {
     font-family: 'Roboto Light';
     src: url('./assets/fonts/Roboto-Light_0.ttf');
 }
@@ -15,15 +19,13 @@
     src: url('./assets/fonts/Roboto-Bold.ttf');
 }
 .body {
-     background-color: #f2f1f6;
      margin: 0;
-     overflow-x: hidden 
-}
-
-canvas { 
-    width: 100vw; 
-    height: 100vh; 
-    display: block
+     overflow-x: hidden;
+     overflow-y: hidden;
+     width: 100vw;
+     height: 100vh;
+     position: relative; 
+     background-image: url('./assets/images/light-background-pattern.png');
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, 
@@ -44,4 +46,247 @@ a, a:hover{
 
 span{
     font-family: 'Roboto Light';    
+}
+
+.white-logo{
+    height: 00px;
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+}
+.white-logo-expanded{
+    height: 250px;
+    animation-name: show-logo; 
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.logo{
+    height: 250px;
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+    animation-name: show-logo; 
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes show-logo{
+    0%{height: 0px}
+    100%{height: 250px;}
+}
+
+.loading{
+    display: block;
+    width: 200px;
+    /* border-radius: 100px; */
+    /* animation-name: load; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite; */
+    margin: auto;
+    margin-top: 300px;
+}
+@keyframes load{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+.body-reduce{
+    animation-name: body-reduce-animation; 
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 100%;
+}
+@keyframes body-reduce-animation{
+    0%{width: 100vmax}
+    100%{width: 100%}
+}
+
+.no-padding{
+    padding: 0px;
+    margin: 0px;
+}
+
+.black-body{
+    overflow:hidden;
+    height: 100vh;
+    float: right;
+    display: block;
+    background-color: #3A3A3A ;
+    background-image: url('./assets/images/dark-background-pattern.png');
+}
+
+.black-body-expand{
+    animation-name: black-body-expand-animation; 
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 100%;
+}
+
+@keyframes black-body-expand-animation{
+    0%{width: 0px;}
+    100%{width: 100%;}
+}
+
+/* .menu{
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    margin-top: 70vh;
+} */
+.menu{
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    /* margin-top: 70vh; */
+}
+.menu-item{
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-family: 'Myriad Pro Bold';
+    font-size: 13pt;
+    color: #3A3A3A;
+    transition: 0.5s;   
+    cursor: pointer; 
+}
+.menu-item:hover{
+    padding-right: 20px;
+    transition: 0.5s;
+}
+
+.menu-show{
+    animation-name: menu-show-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+@keyframes menu-show-animation{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* .triangle::before{
+    position: absolute;
+    content: "";
+    border-left: 5px solid transparent;
+    border-bottom: 13px solid black;
+    border-right: 5px solid transparent;
+} */
+
+.triangle{
+    margin:auto;
+    margin-top: 300px;
+    display: block;
+}
+
+
+.content{
+    width: 100%;
+    height: 100vh;
+    overflow:auto;
+    display: none;
+    float: left;
+}
+
+.display-block{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+    width: 250px;
+    display: block;
+    margin: auto;
+    /* margin-top: 100px; */
+}
+
+.title{
+    font-family: 'Roboto Bold';
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+
+.desc{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Roboto Light';
+}
+
+.projects-container{
+    width: 70%;
+}
+.project{
+    display: inline-block;
+    cursor: pointer;
+}
+.project-upside{
+    margin-top: 30px;
+}
+.project-thumbnail-hover{
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: 300ms;
+}
+.project-thumbnail{
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: 300ms;    
+}
+.project:hover .project-thumbnail{
+    display: none;
+    opacity: 0;
+    transition: 300ms;    
+}
+.project:hover .project-thumbnail-hover{
+    display: block;
+    opacity: 1;
+    transition: 300ms;    
+}
+@keyframes projects-hover{
+    0%{opacity: 0; display: none}
+    100%{opacity: 1; display: block}
+}
+.project-title{
+    font-family: 'Roboto Bold';
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+.row-project{
+    padding-top: 30px;
+}
+
+.body-fadeout{
+    animation-name: body-fadeout; 
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    width: 0px;
+}
+@keyframes body-fadeout{
+    0%{width: 100%;}
+    100%{width: 0px;}
+}
+.black-body-fadein{
+    animation-name: body-fadeout; 
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    width: 0;
+}
+@keyframes black-body-fadein{
+    0%{width: 100%;}
+    100%{width: 0;}
 }
