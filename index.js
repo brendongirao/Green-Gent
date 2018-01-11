@@ -96,5 +96,25 @@ $(document).ready(function(){
             window.location.href="./pages/up/up.html";
         }, 400)             
     })
+    $("#geoleo").click(function(){
+        console.log("clickou");
+        $(".project").hide();
+        $(".menu").hide();
+        $(".body").addClass("body-fadeout");   
+        $(".black-body").addClass("black-body-fadein");   
+        setTimeout(function(){
+            window.location.href="./pages/geoleo/geoleo.html";
+        }, 400)             
+    })
+    $("#quixique").click(function(){
+        console.log("clickou");
+        $(".project").hide();
+        $(".menu").hide();
+        $(".body").addClass("body-fadeout");   
+        $(".black-body").addClass("black-body-fadein");   
+        setTimeout(function(){
+            window.location.href="./pages/quixique/quixique.html";
+        }, 400)             
+    })
 
 })
