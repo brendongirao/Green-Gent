@@ -138,6 +138,25 @@
     margin-top: 20px;
 }
 
+.links{
+    color: #AEBD24;
+}
+.links:hover{
+    color: #AEBD24;
+
+}
+
+.image-right{
+    padding-left: 20px;
+    display: inline-block;
+    width: 50%;
+}
+.text-left{
+    float: left;
+    width: 50%;
+    text-align: justify;
+}
+
 .content{
     margin: auto;
     width: 70%;
@@ -174,3 +193,63 @@
     height: 100%;    
     width: 200px;
 }
+
+
+@media screen and (max-width:1024px) {
+
+    .voltar{
+        display: none;
+    }
+    .black-body{
+        width: 100vw;
+        /* height: 10vh; */
+        z-index: 100;
+    }
+    .black-body-open{
+        animation-name:  black-body-open-r; 
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        height: 10vh;
+    }
+    @keyframes black-body-open-r{
+        0%{height: 0}
+        100%{height: 10vh}
+    }
+    .col-sm-3, .col-md-3, .col-xs-3{
+        width: 100vw;
+    }
+    .fixed{
+        position: static
+    }
+    .infos-box{
+        bottom: 0px;
+        position: static;
+        padding-top: 20px;
+    }
+    .infos{
+        text-align: left;
+    }
+    ul{
+        -webkit-padding-start: 0px;
+    }
+    .title{
+        float: none;
+    }
+    .title::after{
+        content: "";
+        vertical-align: middle;
+        margin-left: 0px;
+        margin-top: 15px;
+        width: 0; 
+        float: right;
+        height: 0; 
+      
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent; 
+        border-top: 10px solid #AEBD24; 
+    }
+    .personal{
+        width: 150px;
+    }
+
+}    
