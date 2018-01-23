@@ -18,4 +18,14 @@ $(document).ready(function(){
         $(".infos-box").addClass("opacity");
     },400)
 
+    $(".title").click(function(){
+        if($(".black-body")[0].clientWidth == window.innerWidth){
+            if( $(".black-body")[0].clientHeight < window.innerHeight*0.3 ){
+                $(".black-body").animate({height: window.innerHeight*0.3}, 300);        
+            } else{
+                $(".black-body").animate({height: window.innerHeight*0.1}, 300);        
+            }
+        }
+    })
+
 })
